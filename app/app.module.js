@@ -1,13 +1,16 @@
-angular.module('MyApp', [
-  'ngMessages',
-  'ngRoute',
-  'ngSanitize',
-  'mgcrea.ngStrap',
-  'auth',
-  'profile',
-  'underscore',
-  'uiGmapgoogle-maps'
-])
+(function() {
+  'use strict';
+
+  angular
+  .module('MyApp', [
+    'ngMessages',
+    'ngRoute',
+    'ngSanitize',
+    'mgcrea.ngStrap',
+    'auth',
+    'profile',
+    'map'
+  ])
 
 .config(function($routeProvider) {
   $routeProvider
@@ -28,10 +31,12 @@ angular.module('MyApp', [
     .otherwise({
       redirectTo: '/404'
     });
-    
+
     angular
       .module('underscore', [])
       .factory('_', function ($window) {
         return $window._;
     });
-});
+  });
+
+}());
