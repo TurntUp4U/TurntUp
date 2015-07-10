@@ -1,6 +1,13 @@
 angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer'])
   .config(function($routeProvider, $authProvider) {
     $routeProvider
+      // .when('/', {
+      //   redirectTo: '/home'
+      // })
+      // .when('/home', {
+      //   templateUrl: 'home/views/home.html',
+      //   controller: 'LoginCtrl'
+      // })
       .when('/login', {
         templateUrl: 'auth/views/login.html',
         controller: 'LoginCtrl'
@@ -31,7 +38,7 @@ angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer']
         }
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
       });
 
 

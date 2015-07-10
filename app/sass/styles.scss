@@ -28,8 +28,9 @@ a {
 }
 
 .navbar-header {
+  width: 10%;
+  height: 100%;
   float: left;
-  padding-left: 15px;
 }
 
 .navbar-nav {
@@ -61,8 +62,20 @@ a {
 }
 
 .navbar-brand {
-  margin-left: -15px;
+  width: 100%;
+  padding: 0;
   transition: 0.25s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand i {
+  margin-right: 3.5px;
+}
+
+.navbar-brand span {
+  margin-left: 3.5px;
 }
 
 .appImageRow {
