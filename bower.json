@@ -5,6 +5,17 @@
     "Calvin Webster <calweb@gmail.com>"
   ],
   "description": "Simple demo using http://github.com/sahat/satellizer for auth",
+
+  "keywords": {
+    "demo": "demo",
+    "name": "TurntUp",
+    "version": "0.0.0",
+    "homepage": "https://github.com/ClaytonKinder/TurntUp",
+    "authors": [
+    "Clayton Kinder <ClaytonAlanKinder@gmail.com>"
+    ]
+  },
+
   "license": "MIT",
   "ignore": [
     "**/.*",

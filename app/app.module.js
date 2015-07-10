@@ -11,6 +11,13 @@ angular.module('MyApp', [
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
+      redirectTo: '/home'
+    })
+    .when('/home', {
+      templateUrl: 'home/views/home.html',
+      controller: 'LoginCtrl'
+    })
+    .when('/login', {
       templateUrl: 'auth/views/login.html',
       controller: 'LoginCtrl'
     })

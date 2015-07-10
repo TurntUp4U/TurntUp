@@ -20,8 +20,9 @@ a {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
 
 .navbar-header {
-  float: left;
-  padding-left: 15px; }
+  width: 10%;
+  height: 100%;
+  float: left; }
 
 .navbar-nav {
   float: left;
@@ -46,9 +47,28 @@ a {
   background-color: #fff; }
 
 .navbar-brand {
-  margin-left: -15px;
+  width: 100%;
+  padding: 0;
   -webkit-transition: 0.25s all;
-          transition: 0.25s all; }
+          transition: 0.25s all;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.navbar-brand i {
+  margin-right: 3.5px; }
+
+.navbar-brand span {
+  margin-left: 3.5px; }
 
 .appImageRow {
   z-index: -1;
