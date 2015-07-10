@@ -1,0 +1,19 @@
+<body ng-controller="MapsController">
+  <div>
+    <div>
+      <ul>
+        <li><button>location</button></li>
+        <li><button>keyword</button></li>
+      </ul>
+      <input type="text" class="Search" placeholder="search">
+      <div>Filter: <button>Friends</button><<button>All</button></div>
+    </div>
+	    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <marker data-ng-repeat="marker in markers" coords="marker">
+          <window isVisibleOnClick="true">
+            <p>{{post.comment}}</p>
+            <p>{{post.name}}</p>
+          </window>
+        </marker>
+	    </ui-gmap-google-map>
+  </div>
