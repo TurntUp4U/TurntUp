@@ -5,16 +5,19 @@ angular.module('MyApp', [
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'posts'
 ])
 
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      redirectTo: '/home'
+      redirectTo: '/switch'
     })
-    .when('/home', {
-      templateUrl: 'home/views/home.html',
+    .when('/switch', {
+      templateUrl: 'switch/views/switch.html',
+      controller: 'LoginCtrl'
+    })
+    .when('/map', {
+      templateUrl: 'map/views/map.html',
       controller: 'LoginCtrl'
     })
     .when('/login', {

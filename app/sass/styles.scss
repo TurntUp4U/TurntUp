@@ -1,4 +1,5 @@
 $pc: #F44336;
+$pc2: #ce832c;
 $dpc: #D32F2F;
 
 body {
@@ -28,7 +29,7 @@ a {
 }
 
 .navbar-header {
-  width: 10%;
+  width: 15%;
   height: 100%;
   float: left;
 }
@@ -46,6 +47,10 @@ a {
   padding: 15px;
 }
 
+.navbar-default .navbar-nav>li>a {
+  color: inherit;
+}
+
 .navbar-default {
   color: #fff;
   background: #fff;
@@ -53,12 +58,12 @@ a {
 
 .navbar-default .navbar-brand {
   color: #fff;
-  background-color: #ce832c;
+  background-color: $pc2;
 }
 
 .navbar-default .navbar-brand:hover {
-  color: #ce832c;
-  background-color: #fff;
+  color: #fff;
+  background-color: $pc2;
 }
 
 .navbar-brand {
@@ -76,6 +81,35 @@ a {
 
 .navbar-brand span {
   margin-left: 3.5px;
+}
+
+.navbar-middle {
+  width: 70%;
+}
+
+.navbar-middle li {
+  color: #777;
+  width: 50%;
+  text-align: center;
+}
+
+.navbar-middle li.active {
+  border: 10px black;
+}
+
+.navbar-right {
+  width: 15%;
+  background-color: $pc2;
+  color: #fff;
+}
+
+.navbar-right li {
+  width: 50%;
+}
+
+.navbar-right li a {
+  text-align: center;
+  color: #fff;
 }
 
 .appImageRow {
@@ -360,6 +394,35 @@ a {
 .btn-live:focus {
   color: #fff;
   background-color: #125acd;
+}
+
+/*********************
+* SwitchBlock
+*********************/
+
+.switchBlock {
+  padding: 100px 0;
+  text-align: center;
+
+  input[type=checkbox] {
+    display:none;
+  }
+
+  input[type=checkbox] + label {
+    background-image: url('../img/turnt-switch-down.png');
+    height: 363px;
+    width: 241px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+  }
+
+  input[type=checkbox]:checked + label {
+    background-image: url('../img/turnt-switch-up.png');
+    height: 363px;
+    width: 241px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+  }
 }
 
 /*********************
