@@ -11,7 +11,8 @@ angular.module('MyApp', [
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'auth/views/login.html'
+      templateUrl: 'auth/views/login.html',
+      controller: 'LoginCtrl'
     })
     .when('/404', {
       template: '<h1>Sorry, page not found</h1>'
