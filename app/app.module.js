@@ -1,24 +1,22 @@
-(function() {
-  'use strict';
-
-  angular
-  .module('MyApp', [
-    'ngMessages',
-    'ngRoute',
-    'ngSanitize',
-    'mgcrea.ngStrap',
-    'auth',
-    'profile',
-    'map'
-  ])
-
+angular.module('MyApp', [
+  'ngMessages',
+  'ngRoute',
+  'ngSanitize',
+  'mgcrea.ngStrap',
+  'auth',
+  'profile',
+])
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      redirectTo: '/home'
+      redirectTo: '/switch'
     })
-    .when('/home', {
-      templateUrl: 'home/views/home.html',
+    .when('/switch', {
+      templateUrl: 'switch/views/switch.html',
+      controller: 'LoginCtrl'
+    })
+    .when('/map', {
+      templateUrl: 'map/views/map.html',
       controller: 'LoginCtrl'
     })
     .when('/login', {
@@ -32,11 +30,6 @@
       redirectTo: '/404'
     });
 
-    angular
-      .module('underscore', [])
-      .factory('_', function ($window) {
-        return $window._;
-    });
   });
 
 }());

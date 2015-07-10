@@ -1,0 +1,19 @@
+<ng-include src="'switch/views/navbar.html'"></ng-include>
+
+<audio class="switchAudio">
+   <source src="Yall-Ready-For-This.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container" ng-controller="ProfileController">
+  <div class="panel panel-default">
+    <div id="confettiBlock">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="switchBlock" ng-controller="SwitchCtrl">
+            <input ng-model="entity.isChecked" ng-change="switchActivated(entity.isChecked)" type='checkbox' name='switch' value='switch' id="switch"/><label for="switch"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
