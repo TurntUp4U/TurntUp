@@ -16,7 +16,7 @@ var User = require('./entities/User');
 var authRoutes = require('./routes/auth');
 var crudRoutes = require('./routes/apiCrud');
 var profileRoutes = require('./routes/profile');
-var dotenv = require('dotenv').load();
+
 
 mongoose.connect(config.MONGO_URI);
 
