@@ -6,7 +6,6 @@ angular.module('MyApp', [
   'auth',
   'profile',
 ])
-
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -30,4 +29,7 @@ angular.module('MyApp', [
     .otherwise({
       redirectTo: '/404'
     });
-});
+
+  });
+
+}());
