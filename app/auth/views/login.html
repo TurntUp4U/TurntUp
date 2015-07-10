@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="appImageRow row">
+    <img src="img/turnip.png">
+  </div>
+  <div class="row">
+    <h1 class="appTitle text-center">Turntup</h1>
+  </div>
+  <div class="row">
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Log in</h2>
+        <form method="post" ng-submit="login()" name="loginForm">
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
+            <span class="ion-at form-control-feedback"></span>
+          </div>
+
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="password" name="password" ng-model="password" placeholder="Password" required>
+            <span class="ion-key form-control-feedback"></span>
+          </div>
+
+          <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg  btn-block btn-success">Log in</button>
+
+          <br/>
+
+          <p class="text-center">
+            <a href="#">Forgot your password?</a>
+          </p>
+
+          <p class="text-center text-muted">
+            <small>Don't have an account yet? <a href="/#/signup">Sign up</a></small>
+          </p>
+
+          <div class="signup-or-separator">
+            <h6 class="text">or</h6>
+            <hr>
+          </div>
+        </form>
+        <div class="btn-group">
+          <button class="btn btn-facebook" ng-click="authenticate('facebook')">
+            <i class="ion-social-facebook"></i>
+          </button>
+          <button class="btn btn-google-plus" ng-click="authenticate('google')">
+            <i class="ion-social-googleplus"></i>
+          </button>
+          <button class="btn btn-linkedin" ng-click="authenticate('linkedin')">
+            <i class="ion-social-linkedin"></i>
+          </button>
+          <button class="btn btn-twitter" ng-click="authenticate('twitter')">
+            <i class="ion-social-twitter"></i>
+          </button>
+          <button class="btn btn-foursquare" ng-click="authenticate('foursquare')">
+            <i class="fa fa-foursquare"></i>
+          </button>
+          <button class="btn btn-github" ng-click="authenticate('github')">
+            <i class="ion-social-github"></i>
+          </button>
+          <button class="btn btn-yahoo" ng-click="authenticate('yahoo')">
+            <i class="ion-social-yahoo"></i>
+          </button>
+          <button class="btn btn-live" ng-click="authenticate('live')">
+            <i class="ion-social-windows"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
