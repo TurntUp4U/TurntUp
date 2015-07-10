@@ -1,13 +1,13 @@
 angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer'])
   .config(function($routeProvider, $authProvider) {
     $routeProvider
-      // .when('/', {
-      //   redirectTo: '/home'
-      // })
-      // .when('/home', {
-      //   templateUrl: 'home/views/home.html',
-      //   controller: 'LoginCtrl'
-      // })
+      .when('/', {
+        redirectTo: '/switch'
+      })
+      .when('/switch', {
+        templateUrl: 'switch/views/switch.html',
+        controller: 'LoginCtrl'
+      })
       .when('/login', {
         templateUrl: 'auth/views/login.html',
         controller: 'LoginCtrl'

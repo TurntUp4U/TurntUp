@@ -20,7 +20,7 @@ a {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
 
 .navbar-header {
-  width: 10%;
+  width: 15%;
   height: 100%;
   float: left; }
 
@@ -34,6 +34,9 @@ a {
 .navbar-nav > li > a {
   padding: 15px; }
 
+.navbar-default .navbar-nav > li > a {
+  color: inherit; }
+
 .navbar-default {
   color: #fff;
   background: #fff; }
@@ -43,8 +46,8 @@ a {
   background-color: #ce832c; }
 
 .navbar-default .navbar-brand:hover {
-  color: #ce832c;
-  background-color: #fff; }
+  color: #fff;
+  background-color: #ce832c; }
 
 .navbar-brand {
   width: 100%;
@@ -69,6 +72,29 @@ a {
 
 .navbar-brand span {
   margin-left: 3.5px; }
+
+.navbar-middle {
+  width: 70%; }
+
+.navbar-middle li {
+  color: #777;
+  width: 50%;
+  text-align: center; }
+
+.navbar-middle li.active {
+  border: 10px black; }
+
+.navbar-right {
+  width: 15%;
+  background-color: #ce832c;
+  color: #fff; }
+
+.navbar-right li {
+  width: 50%; }
+
+.navbar-right li a {
+  text-align: center;
+  color: #fff; }
 
 .appImageRow {
   z-index: -1;
@@ -300,6 +326,27 @@ a {
 .btn-live:focus {
   color: #fff;
   background-color: #125acd; }
+
+/*********************
+* SwitchBlock
+*********************/
+.switchBlock {
+  padding: 100px 0;
+  text-align: center; }
+  .switchBlock input[type=checkbox] {
+    display: none; }
+  .switchBlock input[type=checkbox] + label {
+    background-image: url("../img/turnt-switch-down.png");
+    height: 363px;
+    width: 241px;
+    display: inline-block;
+    padding: 0 0 0 0px; }
+  .switchBlock input[type=checkbox]:checked + label {
+    background-image: url("../img/turnt-switch-up.png");
+    height: 363px;
+    width: 241px;
+    display: inline-block;
+    padding: 0 0 0 0px; }
 
 /*********************
 * Animations
