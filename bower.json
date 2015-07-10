@@ -15,6 +15,7 @@
     "Clayton Kinder <ClaytonAlanKinder@gmail.com>"
     ]
   },
+
   "license": "MIT",
   "ignore": [
     "**/.*",
