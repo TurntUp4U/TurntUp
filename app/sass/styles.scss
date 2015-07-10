@@ -409,6 +409,7 @@ a {
   }
 
   input[type=checkbox] + label {
+    cursor: pointer;
     background-image: url('../img/turnt-switch-down.png');
     height: 363px;
     width: 241px;
@@ -417,6 +418,7 @@ a {
   }
 
   input[type=checkbox]:checked + label {
+    cursor: pointer;
     background-image: url('../img/turnt-switch-up.png');
     height: 363px;
     width: 241px;
