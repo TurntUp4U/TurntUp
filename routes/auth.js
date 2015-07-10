@@ -63,6 +63,9 @@ router.route('/login')
         displayName: req.body.displayName,
         email: req.body.email,
         password: req.body.password,
+        isTurnt: false,
+        latitude: '',
+        longitude: ''
       });
       user.save(function() {
         res.send({ token: createToken(user) });
