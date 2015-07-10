@@ -15,7 +15,10 @@ var userSchema = new mongoose.Schema({
   linkedin: String,
   live: String,
   yahoo: String,
-  twitter: String
+  twitter: String,
+  isTurnt: Boolean,
+  latitude: String,
+  longitude: String
 });
 
 userSchema.pre('save', function(next) {

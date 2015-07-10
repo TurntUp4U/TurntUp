@@ -2,6 +2,12 @@
   'use strict';
   angular
   .module('map')
-  .factory('MapsService', function(){})
+  .factory('MapsService', function(){
+    var getMarkers = function() {};
+
+    return {
+
+    }
+  })
 
 }());

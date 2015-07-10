@@ -1,3 +1,4 @@
+(function() {
 angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
@@ -5,6 +6,7 @@ angular.module('MyApp', [
   'mgcrea.ngStrap',
   'auth',
   'profile',
+  'map'
 ])
 .config(function($routeProvider) {
   $routeProvider
@@ -13,10 +15,6 @@ angular.module('MyApp', [
     })
     .when('/switch', {
       templateUrl: 'switch/views/switch.html',
-      controller: 'LoginCtrl'
-    })
-    .when('/map', {
-      templateUrl: 'map/views/map.html',
       controller: 'LoginCtrl'
     })
     .when('/login', {
@@ -29,7 +27,5 @@ angular.module('MyApp', [
     .otherwise({
       redirectTo: '/404'
     });
-
   });
-
 }());
