@@ -5,7 +5,8 @@ angular.module('MyApp', [
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'posts'
+  'underscore',
+  'uiGmapgoogle-maps'
 ])
 
 .config(function($routeProvider) {
@@ -26,5 +27,11 @@ angular.module('MyApp', [
     })
     .otherwise({
       redirectTo: '/404'
+    });
+    
+    angular
+      .module('underscore', [])
+      .factory('_', function ($window) {
+        return $window._;
     });
 });
