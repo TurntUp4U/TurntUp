@@ -4,7 +4,8 @@
   angular
     .module('TurntUp', [
       'ngRoute',
-      'underscore'
+      'underscore',
+      'uiGmapgoogle-maps',
     ])
     .config(function ($routeProvider) {
       $routeProvider
