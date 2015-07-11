@@ -2,14 +2,15 @@
 <body ng-controller="MapsController">
   <ng-include src="'switch/views/navbar.html'"></ng-include>
     <div>
-      <div>
-        <input type="text" class="Search" placeholder="search">
+      <div class="SearchOptions">
+        <div class="centerSearch">
         <ul id="mapButtonList">
           <li><button id="mapLocationButton" class="button">Location</button></li>
           <li><button id="mapKeywordButton" class="button">Keyword</button></li>
-        </ul>
+        </ul></div>
+        <div class="centerSearch"><input type="text" class="Search" placeholder="search"></div>
 
-        <div id="mapFilter"><span id="filterTitle">Filter:</span> <button class="button">Friends</button><button class="button">All</button></div>
+        <div class="centerSearch"><div id="mapFilter"><span id="filterTitle">Filter:</span> <button class="buttonFilter">Friends</button><button class="buttonFilter">All</button></div>
       </div>
     </div>
 
