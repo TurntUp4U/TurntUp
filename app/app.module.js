@@ -7,6 +7,7 @@
   'mgcrea.ngStrap',
   'auth',
   'profile',
+  'map'
 ])
 .config(function($routeProvider) {
   $routeProvider
@@ -27,5 +28,6 @@
     .otherwise({
       redirectTo: '/404'
     });
-});
+
+  });
 }());

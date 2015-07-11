@@ -6,6 +6,9 @@ angular.module('profile')
       },
       updateProfile: function(profileData) {
         return $http.put('/api/me', profileData);
+      },
+      updateTurnt: function() {
+        return $http.put('/api/switch/turnt', {});
       }
     };
   });
