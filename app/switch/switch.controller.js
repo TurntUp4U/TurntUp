@@ -27,6 +27,7 @@ angular.module('MyApp')
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  position.coords.latitude;
             MapSwitchService.switchCoords.longitude = position.coords.longitude;
+            //this portion will add the status for the turntUp in the server
             var whereYouAre= MapSwitchService.switchCoords;
             var name = {
               displayName: $scope.account.displayName
