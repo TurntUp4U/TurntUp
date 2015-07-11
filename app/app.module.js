@@ -7,7 +7,8 @@
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'map'
+  'map',
+  'ngGeolocation'
 ])
 .config(function($routeProvider) {
   $routeProvider
