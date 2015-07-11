@@ -1,20 +1,22 @@
 <body ng-controller="MapsController">
-  <div>
+  <ng-include src="'switch/views/navbar.html'"></ng-include>
     <div>
-      <ul>
-        <li><button>location</button></li>
-        <li><button>keyword</button></li>
-      </ul>
-      <input type="text" class="Search" placeholder="search">
-      <div>Filter: <button>Friends</button><<button>All</button></div>
-    </div>
-  </div>
+      <div>
+        <input type="text" class="Search" placeholder="search">
+        <ul id="mapButtonList">
+          <li><button id="mapLocationButton" class="button">Location</button></li>
+          <li><button id="mapKeywordButton" class="button">Keyword</button></li>
+        </ul>
 
-  <div class="hereIsMap">
-    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
-        <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
-    </ui-gmap-google-map>
-  </div>
+        <div id="mapFilter"><span id="filterTitle">Filter:</span> <button class="button">Friends</button><button class="button">All</button></div>
+      </div>
+    </div>
+
+    <div class="hereIsMap">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+          <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+      </ui-gmap-google-map>
+    </div>
 
 
 </body>
