@@ -437,62 +437,84 @@ a {
   padding-left: 0;
   margin-top: 3%;
   list-style: none;
-  display: inline-block;
-  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
 }
 
 #mapButtonList li{
   margin-left: 2%;
-  display: inline-block;
+  width: 45%;
 }
 
 #mapFilter{
-  float:right;
-  margin-right: 10%;
-  margin-top: 3%;
-  width:20%;
+  width: 60%;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
 }
 
 #filterTitle{
   margin-right: 2%;
-}
 
-.button {
-   border-top: 1px solid #000000;
-   background: #fefdcf;
+}
+.buttonFilter {
+   background: #DDDDDD;
    padding: 4.5px 9px;
-   border-radius: 12px;
-   color: #9365b8;
+   border-radius: 4px;
+   color: #545454;
    font-size: 10px;
-   font-family: Georgia, Serif;
    text-decoration: none;
    vertical-align: middle;
-   width: 100px;
+   width: 40%;
    margin-left: 2%;
+   font-weight: bold;
+   }
+  .buttonFilter:hover {
+    background: white;
+  }
+  .buttonFilter:active {
+    background: #9365b8;
+  }
+
+
+.button {
+   background: #fefdcf;
+   padding: 4.5px 9px;
+   border-radius: 4px;
+   color: #9365b8;
+   font-size: 10px;
+   text-decoration: none;
+   vertical-align: middle;
+   width: 100%;
+   margin-left: 2%;
+   font-weight: bold;
    }
 
 .button:hover {
-   border-top-color: #9365b8;
    background: #9365b8;
    color: #fefdcf;
    }
 
 .button:active {
-   border-top-color: #000000;
    background: #000000;
    }
+.centerSearch{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
+}
 .Search{
-   margin-left: 10%;
+   height: 30px;
    border-width: 2px;
-   border-radius: 12px;
-   border-style: outset;
+   border-radius: 4px;
+   width: 80%;
+   font-family: 'Open Sans', sans-serif;
    font-size: 10px;
    text-align: center;
    padding: 5px;
    border-color: #cccccc;
-   box-shadow: 1px 4px 8px 0px #9365b8;
-   font-family:Georgia, Serif;
 }
 
 
@@ -571,6 +593,9 @@ MEDIA QUERIES
   }
   .navbar-middle{
     width:60%;
+  }
+  .navbar-header{
+    width: 20%;
   }
 }
 @media all and (max-width: 777px) {
