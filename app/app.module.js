@@ -1,14 +1,14 @@
 (function() {
   'use strict';
-  
-angular.module('MyApp', [
+  angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
   'ngSanitize',
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'map'
+  'map',
+  'ngGeolocation'
 ])
 .config(function($routeProvider) {
   $routeProvider
