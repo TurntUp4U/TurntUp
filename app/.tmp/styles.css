@@ -350,6 +350,9 @@ a {
     display: inline-block;
     padding: 0 0 0 0px; }
 
+.angular-google-map-container {
+  height: 400px; }
+
 /*********************
 * Animations
 *********************/

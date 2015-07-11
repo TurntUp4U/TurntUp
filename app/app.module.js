@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+  
 angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
@@ -27,5 +29,6 @@ angular.module('MyApp', [
     .otherwise({
       redirectTo: '/404'
     });
+
   });
 }());
