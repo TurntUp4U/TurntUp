@@ -9,11 +9,13 @@ angular.module('MyApp')
 
     $scope.switchActivated = function(isChecked) {
       console.log('Switch activated!');
-      Account.updateTurnt().success(function(){
-        Account.getProfile().success(function(data){
+      Account.updateTurnt().success(function() {
+        Account.getProfile().success(function(data) {
           console.log(data);
           $scope.account = data;
           isTurnt = data.isTurnt;
+          var now = new moment().format();
+          console.log(now);
           console.log(isTurnt);
         });
       });
@@ -24,7 +26,7 @@ angular.module('MyApp')
         $('#confettiBlock').css('background-image', 'url(img/confetti.gif)');
         $('body').addClass('redPulse');
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position){
+          navigator.geolocation.getCurrentPosition(function(position) {
             MapSwitchService.switchCoords.latitude =  position.coords.latitude;
             MapSwitchService.switchCoords.longitude = position.coords.longitude;
             //this portion will add the status for the turntUp in the server

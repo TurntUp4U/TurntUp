@@ -8,7 +8,8 @@
   'auth',
   'profile',
   'map',
-  'ngGeolocation'
+  'ngGeolocation',
+  'angularMoment'
 ])
 .config(function($routeProvider) {
   $routeProvider

@@ -13,20 +13,6 @@ var $ = require('gulp-load-plugins')({
 
 var port = process.env.PORT || config.defaultPort;
 
-gulp.task('vet', function() {
-  log('Analyzing source with JSHint and JSCS');
-
-  return gulp
-    .src(config.alljs)
-    .pipe($.if(args.verbose, $.print()))
-    .pipe($.jscs())
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish', {
-      verbose: true
-    }))
-    .pipe($.jshint.reporter('fail'));
-});
-
 gulp.task('sass', ['clean-sass'], function(done) {
   log('Compiling Sass => CSS');
 
@@ -89,7 +75,7 @@ gulp.task('serve-dev', ['inject'], function() {
   };
 
   return $.nodemon(nodemonOptions)
-    .on('restart', ['vet'], function(event) {
+    .on('restart', function(event) {
       log('*** Server restarted ***');
       log('files changed on restart:\n' + event);
     })
