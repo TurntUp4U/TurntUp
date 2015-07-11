@@ -23,16 +23,16 @@
               return marker;
             };
             // filling array with markers
-          $scope.createMarkers = function() {
-              for (var i = 0; i < $scope.locations.spots.length; i++) {
-                var marker = $scope.createMarker($scope.locations.spots[i]);
-                $scope.markers.push(marker);
-              }
-            };
-            // calling controller initialization
-            $scope.createMarkers();
-            uiGmapGoogleMapApi.then(function(maps) {
-              console.log('map running, but what goes here?')
-          });
+          // $scope.createMarkers = function() {
+          //     for (var i = 0; i < $scope.locations.spots.length; i++) {
+          //       var marker = $scope.createMarker($scope.locations.spots[i]);
+          //       $scope.markers.push(marker);
+          //     }
+          //   };
+          //   // calling controller initialization
+          //   $scope.createMarkers();
+          //   uiGmapGoogleMapApi.then(function(maps) {
+          //     console.log('map running, but what goes here?')
+          // });
     });
 })();
