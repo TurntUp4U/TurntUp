@@ -14,8 +14,6 @@ angular.module('MyApp')
           console.log(data);
           $scope.account = data;
           isTurnt = data.isTurnt;
-          var now = new moment().format();
-          console.log(now);
           console.log(isTurnt);
         });
       });
@@ -34,7 +32,9 @@ angular.module('MyApp')
             var name = {
               displayName: $scope.account.displayName
             }
-            var mergedObject = angular.extend(whereYouAre, name);
+            var now = new moment().format();
+            var turntTime = now;
+            var mergedObject = angular.extend(whereYouAre, name, turntTime);
             MapSwitchService.addToMap(mergedObject);
           });
         }
