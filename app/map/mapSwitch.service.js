@@ -22,7 +22,6 @@
           }
         });
       }).then(function(){
-        console.log("post you data");
         $http.post(urlMap, whereYouAre).success(function (response) {
           console.log(response);
         }).error(function (err) {
@@ -44,7 +43,6 @@
         };
 
     var turnDown = function(name){
-      console.log("this is who we want to remove: ", name);
       getFromMap().then(function(spots){
             _.forEach(spots.data, function(oneSpot){
               if(oneSpot.displayName === name){

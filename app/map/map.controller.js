@@ -34,31 +34,31 @@
                     longitude: place[0].geometry.location.lng()
                 }
             };
+          }};
             $scope.markers = [];
 
  			      $scope.createMarker = function(location) {
 			      var marker = {
 			        idKey: location._id,
 			        coords: {
-			          latitude: location.lat,
-			          longitude: location.lng
+			          latitude: location.latitude,
+			          longitude: location.longitude
 			        },
               userName: location.displayName
 			      };
 			      return marker;
 			    };
 
-			    $scope.createMarkers = function() {
-			      for (var i = 0; i < $scope.locations.turntSpots.length; i++) {
-			        var marker = $scope.createMarker($scope.locations.turntSpots[i]);
+			    $scope.createMarkers = function(turntSpots) {
+			      for (var i = 0; i < turntSpots.data.length; i++) {
+			        var marker = $scope.createMarker(turntSpots.data[i]);
 			        $scope.markers.push(marker);
 			      }
             console.log($scope.markers);
 			    };
 
       MapSwitchService.getFromMap().then(function(turntSpots){
-        console.log(turntSpots);
-        createMarkers(turntSpots);
+        $scope.createMarkers(turntSpots);
       });
 
       navigator.geolocation.getCurrentPosition(function(position){
@@ -87,7 +87,5 @@
         };
       });
 
-    }
-  };
   });
 })();
