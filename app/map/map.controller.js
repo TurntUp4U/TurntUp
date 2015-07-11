@@ -44,7 +44,7 @@
 			          latitude: location.latitude,
 			          longitude: location.longitude
 			        },
-              userName: location.displayName
+              userName: location.displayName,
 			      };
 			      return marker;
 			    };
