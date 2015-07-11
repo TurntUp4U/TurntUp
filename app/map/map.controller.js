@@ -11,6 +11,34 @@
         zoom: 15,
       }
 
+      var events = {
+        places_changed: function (searchBox) {
+            var place = searchBox.getPlaces();
+            var lat = place[0].geometry.location.lat();
+            var long = place[0].geometry.location.lng();
+            if (!place || place == 'undefined' || place.length == 0) {
+                console.log('no place data :(');
+                return;
+            }
+
+            $scope.map = {
+                "center": {
+                    "latitude": place[0].geometry.location.lat(),
+                    "longitude": place[0].geometry.location.lng()
+                },
+                "zoom": 18
+            };
+            $scope.marker = {
+                id: 0,
+                coords: {
+                    latitude: place[0].geometry.location.lat(),
+                    longitude: place[0].geometry.location.lng()
+                }
+            };
+
+        }
+      };
+
       navigator.geolocation.getCurrentPosition(function(position){
         if (MapSwitchService.switchCoords.latitude === 0) {
           console.log('Loaded from position!');

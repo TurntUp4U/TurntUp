@@ -1,6 +1,7 @@
 $pc: #F44336;
-$pc2: #ce832c;
+$pc2: #9365b8;
 $dpc: #D32F2F;
+$pulse: #C30000;
 
 body {
   min-height: 100vh;
@@ -426,7 +427,77 @@ a {
     padding: 0 0 0 0px;
   }
 }
-.angular-google-map-container { height: 400px; }
+
+
+/*****************************************************
+* Map Page
+*****************************************************/
+
+#mapButtonList{
+  padding-left: 0;
+  margin-top: 3%;
+  list-style: none;
+  display: inline-block;
+  width: 40%;
+}
+
+#mapButtonList li{
+  margin-left: 2%;
+  display: inline-block;
+}
+
+#mapFilter{
+  float:right;
+  margin-right: 10%;
+  margin-top: 3%;
+  width:20%;
+}
+
+#filterTitle{
+  margin-right: 2%;
+}
+
+.button {
+   border-top: 1px solid #000000;
+   background: #fefdcf;
+   padding: 4.5px 9px;
+   border-radius: 12px;
+   color: #9365b8;
+   font-size: 10px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   width: 100px;
+   margin-left: 2%;
+   }
+
+.button:hover {
+   border-top-color: #9365b8;
+   background: #9365b8;
+   color: #fefdcf;
+   }
+
+.button:active {
+   border-top-color: #000000;
+   background: #000000;
+   }
+
+.Search{
+   margin-left: 10%;
+   border-width: 2px;
+   border-radius: 12px;
+   border-style: outset;
+   font-size: 10px;
+   text-align: center;
+   padding: 5px;
+   border-color: #cccccc;
+   box-shadow: 1px 4px 8px 0px #9365b8;
+   font-family:Georgia, Serif;
+}
+
+
+.angular-google-map-container { height: 500px;
+width: 80%; margin-left: 10%; margin-top: 3%; border: 1px solid black; }
 
 /*********************
 * Animations
@@ -465,5 +536,77 @@ a {
 
   50% {
     opacity: 1;
+  }
+}
+
+/*********************
+* Red pulse animation
+*********************/
+.redPulse {
+  background-color: $pc;
+  transition: all .25s ease;
+  -webkit-animation: cycle-box 1s infinite;
+}
+
+@-webkit-keyframes cycle-box {
+  0% {
+    background-color: $pc;
+  }
+  50% {
+    background-color: $pulse;
+  }
+  100% {
+   color: $pc;
+  }
+}
+
+/**************************
+
+MEDIA QUERIES
+
+**************************/
+@media all and (max-width: 1100px) {
+  .navbar-right{
+    width: 20%;
+  }
+  .navbar-middle{
+    width:60%;
+  }
+}
+@media all and (max-width: 777px) {
+  .navbar-right{
+    width: 25%;
+    font-size: 12px;
+  }
+  .navbar-middle{
+    width:50%;
+  }
+  .navbar-header{
+    width: 25%;
+  }
+}
+@media all and (max-width: 590px) {
+  .navbar-right{
+    width: 40%;
+    }
+  .navbar-middle{
+    width:40%;
+  }
+  .navbar-header{
+    width: 20%;
+  }
+  .turntUpNavTitle{
+    display:none;
+  }
+}
+@media all and (max-width: 460px) {
+  .switchTxt{
+    display:none;
+  }
+  .mapTxt{
+    display:none;
+  }
+  .LoginTxt{
+    display:none;
   }
 }

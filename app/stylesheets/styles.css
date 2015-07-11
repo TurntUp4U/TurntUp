@@ -20,7 +20,10 @@ a {
   border: 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
 }
-
+.turnipIcon {
+  width: 10px;
+  height: 10px;
+}
 .navbar-header {
   float: left;
   padding-left: 15px;

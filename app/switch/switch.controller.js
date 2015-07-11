@@ -21,6 +21,7 @@ angular.module('MyApp')
         console.log('Switch on!');
         $('.switchAudio').trigger('play');
         $('#confettiBlock').css('background-image', 'url(img/confetti.gif)');
+        $('body').addClass('redPulse');
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  position.coords.latitude;
@@ -28,12 +29,14 @@ angular.module('MyApp')
             console.log(MapSwitchService.switchCoords);
           });
         }
+        $('body').addClass('redPulse');
       } else {
         MapSwitchService.switchFlipped = false;
         console.log('Switch off!');
         $('.switchAudio').trigger('pause');
         $('.switchAudio').prop('currentTime', 0);
         $('#confettiBlock').css('background', 'white');
+        $('body').removeClass('redPulse');
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  0;
