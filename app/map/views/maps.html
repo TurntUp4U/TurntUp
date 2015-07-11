@@ -16,11 +16,11 @@
 
     <div class="hereIsMap">
       <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
-          <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+          <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id" userName="marker.userName">
       </ui-gmap-google-map>
     </div>
 
-  <button ng-click="buttonFunction()">Button</button>
+<!--   <button ng-click="buttonFunction()">Button</button> -->
 
 
 </body>
