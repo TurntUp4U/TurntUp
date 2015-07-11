@@ -49,8 +49,7 @@ angular.module('MyApp')
             MapSwitchService.switchCoords.latitude =  0;
             MapSwitchService.switchCoords.longitude = 0;
             MapSwitchService.switchCoords;
-            // console.log("whereYouAre", whereYouAre);
-            // MapSwitchService.addToMap(whereYouAre);
+            MapSwitchService.turnDown($scope.account.displayName);
           });
         }
       }

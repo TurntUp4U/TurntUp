@@ -53,6 +53,7 @@
 			        var marker = $scope.createMarker($scope.locations.turntSpots[i]);
 			        $scope.markers.push(marker);
 			      }
+            console.log($scope.markers);
 			    };
 
       MapSwitchService.getFromMap().then(function(turntSpots){
