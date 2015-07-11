@@ -1,4 +1,6 @@
-angular.module('MyApp', [
+(function() {
+  'use strict';
+  angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
   'ngSanitize',
@@ -15,10 +17,6 @@ angular.module('MyApp', [
       templateUrl: 'switch/views/switch.html',
       controller: 'LoginCtrl'
     })
-    .when('/map', {
-      templateUrl: 'map/views/map.html',
-      controller: 'LoginCtrl'
-    })
     .when('/login', {
       templateUrl: 'auth/views/login.html',
       controller: 'LoginCtrl'
@@ -29,7 +27,5 @@ angular.module('MyApp', [
     .otherwise({
       redirectTo: '/404'
     });
-
-  });
-
+});
 }());

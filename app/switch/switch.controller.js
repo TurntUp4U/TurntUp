@@ -5,10 +5,12 @@ angular.module('MyApp')
       if (isChecked) {
         $('.switchAudio').trigger('play');
         $('#confettiBlock').css('background-image', 'url(img/confetti.gif)');
+        $('body').addClass('redPulse');
       } else {
         $('.switchAudio').trigger('pause');
         $('.switchAudio').prop('currentTime', 0);
         $('#confettiBlock').css('background', 'white');
+        $('body').removeClass('redPulse');
       }
     }
 });
