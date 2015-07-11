@@ -12,6 +12,7 @@ angular.module('MyApp')
       Account.updateTurnt().success(function(){
         Account.getProfile().success(function(data){
           console.log(data);
+          $scope.account = data;
           isTurnt = data.isTurnt;
           console.log(isTurnt);
         });
@@ -26,7 +27,12 @@ angular.module('MyApp')
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  position.coords.latitude;
             MapSwitchService.switchCoords.longitude = position.coords.longitude;
-            console.log(MapSwitchService.switchCoords);
+            var whereYouAre= MapSwitchService.switchCoords;
+            var name = {
+              displayName: $scope.account.displayName
+            }
+            var mergedObject = angular.extend(whereYouAre, name);
+            MapSwitchService.addToMap(mergedObject);
           });
         }
         $('body').addClass('redPulse');
@@ -41,7 +47,9 @@ angular.module('MyApp')
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  0;
             MapSwitchService.switchCoords.longitude = 0;
-            console.log(MapSwitchService.switchCoords);
+            MapSwitchService.switchCoords;
+            // console.log("whereYouAre", whereYouAre);
+            // MapSwitchService.addToMap(whereYouAre);
           });
         }
       }
