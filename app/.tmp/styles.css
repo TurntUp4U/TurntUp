@@ -336,17 +336,22 @@ a {
   .switchBlock input[type=checkbox] {
     display: none; }
   .switchBlock input[type=checkbox] + label {
+    cursor: pointer;
     background-image: url("../img/turnt-switch-down.png");
     height: 363px;
     width: 241px;
     display: inline-block;
     padding: 0 0 0 0px; }
   .switchBlock input[type=checkbox]:checked + label {
+    cursor: pointer;
     background-image: url("../img/turnt-switch-up.png");
     height: 363px;
     width: 241px;
     display: inline-block;
     padding: 0 0 0 0px; }
+
+.angular-google-map-container {
+  height: 400px; }
 
 /*********************
 * Animations
