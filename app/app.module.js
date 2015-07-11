@@ -1,7 +1,6 @@
 (function() {
   'use strict';
-  
-angular.module('MyApp', [
+  angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
   'ngSanitize',

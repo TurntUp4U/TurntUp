@@ -3,3 +3,4 @@ app/vendor
 .DS_Store
 
 figaro.json
+.MERGE_MSG.swp

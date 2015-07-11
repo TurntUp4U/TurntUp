@@ -43,11 +43,11 @@ a {
 
 .navbar-default .navbar-brand {
   color: #fff;
-  background-color: #ce832c; }
+  background-color: #9365b8; }
 
 .navbar-default .navbar-brand:hover {
   color: #fff;
-  background-color: #ce832c; }
+  background-color: #9365b8; }
 
 .navbar-brand {
   width: 100%;
@@ -86,7 +86,7 @@ a {
 
 .navbar-right {
   width: 15%;
-  background-color: #ce832c;
+  background-color: #9365b8;
   color: #fff; }
 
 .navbar-right li {
@@ -447,3 +447,61 @@ a {
             transform: scale3d(0.8, 0.8, 0.8); }
   50% {
     opacity: 1; } }
+/*********************
+* Red pulse animation
+*********************/
+.redPulse {
+  background-color: #F44336;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  -webkit-animation: cycle-box 1s infinite; }
+
+@-webkit-keyframes cycle-box {
+  0% {
+    background-color: #F44336; }
+  50% {
+    background-color: #C30000; }
+  100% {
+    color: #F44336; } }
+/**************************
+
+MEDIA QUERIES
+
+**************************/
+@media all and (max-width: 1100px) {
+  .navbar-right {
+    width: 20%; }
+
+  .navbar-middle {
+    width: 60%; } }
+@media all and (max-width: 777px) {
+  .navbar-right {
+    width: 25%;
+    font-size: 12px; }
+
+  .navbar-middle {
+    width: 50%; }
+
+  .navbar-header {
+    width: 25%; } }
+@media all and (max-width: 590px) {
+  .navbar-right {
+    width: 40%; }
+
+  .navbar-middle {
+    width: 40%; }
+
+  .navbar-header {
+    width: 20%; }
+
+  .turntUpNavTitle {
+    display: none; } }
+@media all and (max-width: 460px) {
+  .switchTxt {
+    display: none; }
+
+  .mapTxt {
+    display: none; }
+
+  .LoginTxt {
+    display: none; } }

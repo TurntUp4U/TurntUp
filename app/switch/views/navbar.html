@@ -1,19 +1,19 @@
 <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
   <div class="navbar-header">
     <div class="navbar-brand" href="/#/">
-      <i class="ion-social-angular"></i>
-      <span>Turntup</span>
+      <img src="img/turnip-nav-white.png" alt="" class="turnipIcon">
+      <span class="turntUpNavTitle">Turntup</span>
     </div>
   </div>
   <ul class="nav navbar-nav navbar-middle" ng-controller="TabController as tab">
-    <li ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)"><a href="/#/switch"><i class="fa fa-toggle-on"></i> Switch</a></li>
-    <li ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)"><a href="/#/map"><i class="fa fa-globe"></i> Map</a></li>
+    <li ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)" class="switchBox"><a href="/#/switch"><i class="fa fa-toggle-on"></i> <span class="switchTxt">Switch</span></a></li>
+    <li ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)"><a href="/#/map" class="mapBox"><i class="fa fa-globe"></i><span class="mapTxt">Map</span></a></li>
   </ul>
-  <ul ng-if="!isAuthenticated()" class="nav navbar-nav navbar-right pull-right">
-    <li><a href="/#/login"><i class="fa fa-sign-in"></i> Login</a></li>
-    <li><a href="/#/signup">Sign up</a></li>
+  <ul ng-if="!isAuthenticated()" class="nav navbar-nav navbar-right pull-right loginSignUp">
+    <li class="loginBox"><a href="/#/login"><i class="fa fa-sign-in"></i><span class="LoginTxt">Login</span></a></li>
+    <li><a href="/#/signup"><span class="signUpTxt">Sign up</span></a></li>
   </ul>
-  <ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right pull-right">
+  <ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right pull-right loginSignUp">
     <li><a href="/#/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
     <li><a href="/#/profile"><i class="fa fa-gear"></i> Profile</a></li>
 
