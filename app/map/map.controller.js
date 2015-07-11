@@ -39,6 +39,10 @@
         }
       };
 
+      MapSwitchService.getFromMap().then(function(turntSpots){
+        console.log(turntSpots);
+      });
+
       navigator.geolocation.getCurrentPosition(function(position){
         if (MapSwitchService.switchCoords.latitude === 0) {
           console.log('Loaded from position!');
