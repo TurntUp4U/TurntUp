@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
 angular.module('MyApp', [
   'ngMessages',
   'ngRoute',
@@ -8,7 +8,8 @@ angular.module('MyApp', [
   'mgcrea.ngStrap',
   'auth',
   'profile',
-  'map'
+  'map',
+  'ngGeolocation'
 ])
 .config(function($routeProvider) {
   $routeProvider

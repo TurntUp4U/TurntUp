@@ -1,4 +1,4 @@
-<body ng-controller="MapsController">
+<body ng-controller="SwitchCtrl">
   <div>
     <div>
       <ul>
@@ -9,12 +9,15 @@
       <div>Filter: <button>Friends</button><<button>All</button></div>
     </div>
   </div>
+  <!-- {{ myCoords }} -->
 
   <div class="hereIsMap">
     <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
         <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
     </ui-gmap-google-map>
   </div>
+
+  <button ng-click="buttonFunction()">Button</button>
 
 
 </body>
