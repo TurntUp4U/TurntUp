@@ -23,6 +23,7 @@ angular.module('MyApp')
         $('.switchAudio').trigger('play');
         $('#confettiBlock').css('background-image', 'url(img/confetti.gif)');
         $('body').addClass('redPulse');
+        $('span').removeClass('turntOff');
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             MapSwitchService.switchCoords.latitude =  position.coords.latitude;
@@ -46,6 +47,7 @@ angular.module('MyApp')
         $('.switchAudio').prop('currentTime', 0);
         $('#confettiBlock').css('background', 'white');
         $('body').removeClass('redPulse');
+        $('span').addClass('turntOff');
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position){
             MapSwitchService.switchCoords.latitude =  0;

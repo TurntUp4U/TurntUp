@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  background: #F44336; }
+  background: #fefdcf; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
@@ -204,6 +204,9 @@ a {
   height: 100px;
   display: block; }
 
+.control-label {
+  color: black; }
+
 .btn {
   font-weight: bold;
   border-radius: 2px;
@@ -350,6 +353,14 @@ a {
     display: inline-block;
     padding: 0 0 0 0px; }
 
+.turnDown4What {
+  text-align: center;
+  font-size: 2em;
+  color: #FFFFFF; }
+
+.turntOff {
+  display: none; }
+
 /*****************************************************
 * Map Page
 *****************************************************/
@@ -364,7 +375,8 @@ a {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  width: 70%; }
+  width: 70%;
+  display: none; }
 
 #mapButtonList li {
   margin-left: 2%;
@@ -380,7 +392,8 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  display: none; }
 
 #filterTitle {
   margin-right: 2%; }
