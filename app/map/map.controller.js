@@ -45,6 +45,7 @@
 			          longitude: location.longitude
 			        },
               userName: location.displayName,
+              turntTime: location.turntTime
 			      };
 			      return marker;
 			    };

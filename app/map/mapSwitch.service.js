@@ -11,7 +11,7 @@
       zoom: 15
     };
 
-    var urlMap = 'http://tiy-fee-rest.herokuapp.com/collections/turnUpMap';
+    var urlMap = 'http://tiy-fee-rest.herokuapp.com/collections/turnUpMap2';
 
     var addToMap = function (whereYouAre) {
       // console.log("this person is turnt up", whereYouAre.displayName);
