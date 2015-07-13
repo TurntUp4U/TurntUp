@@ -318,7 +318,9 @@ a {
   color: #fff;
   background-color: #125acd;
 }
-
+.tOff {
+  display: none;
+}
 /*********************
 * Animations
 *********************/
